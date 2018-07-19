@@ -152,6 +152,67 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-weektwo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>title: mmtzzc<br>—                      第一题</p>
+<p>#1、实现字符串反转 输入str=”string”输出’gnirts’</p>
+<h1 id="str1-”string”"><a href="#str1-”string”" class="headerlink" title="str1=”string”"></a>str1=”string”</h1><h1 id="str2-str1-1"><a href="#str2-str1-1" class="headerlink" title="str2=str1[::-1]"></a>str2=str1[::-1]</h1><h1 id="print-str2"><a href="#print-str2" class="headerlink" title="print(str2)"></a>print(str2)</h1><pre><code>第二题
+</code></pre><p>2、输入一行字符， 分别统计出其中英文字母、空格、数字和其它字符的个数</p>
+<h1 id="zm-kg-sz-qt-0"><a href="#zm-kg-sz-qt-0" class="headerlink" title="zm=kg=sz=qt=0"></a>zm=kg=sz=qt=0</h1><h1 id="str1-input-‘请输入一行字符：’"><a href="#str1-input-‘请输入一行字符：’" class="headerlink" title="str1=input(‘请输入一行字符：’)"></a>str1=input(‘请输入一行字符：’)</h1><h1 id="for-i-in-str1"><a href="#for-i-in-str1" class="headerlink" title="for i in str1:"></a>for i in str1:</h1><h1 id="if-i-isalpha"><a href="#if-i-isalpha" class="headerlink" title="if i.isalpha():"></a>if i.isalpha():</h1><h1 id="zm-1"><a href="#zm-1" class="headerlink" title="zm+=1"></a>zm+=1</h1><h1 id="elif-i-isspace"><a href="#elif-i-isspace" class="headerlink" title="elif i.isspace():"></a>elif i.isspace():</h1><h1 id="kg-1"><a href="#kg-1" class="headerlink" title="kg+=1"></a>kg+=1</h1><h1 id="elif-i-isdigit"><a href="#elif-i-isdigit" class="headerlink" title="elif i.isdigit():"></a>elif i.isdigit():</h1><h1 id="sz-1"><a href="#sz-1" class="headerlink" title="sz+=1"></a>sz+=1</h1><h1 id="else"><a href="#else" class="headerlink" title="else:"></a>else:</h1><h1 id="qt-1"><a href="#qt-1" class="headerlink" title="qt+=1"></a>qt+=1</h1><h1 id="print-‘英文字母的个数为：-d’-zm"><a href="#print-‘英文字母的个数为：-d’-zm" class="headerlink" title="print(‘英文字母的个数为：%d’ % zm)"></a>print(‘英文字母的个数为：%d’ % zm)</h1><h1 id="print-‘空格的个数为：-d’-kg"><a href="#print-‘空格的个数为：-d’-kg" class="headerlink" title="print(‘空格的个数为：%d’ % kg)"></a>print(‘空格的个数为：%d’ % kg)</h1><h1 id="print-‘数字的个数为：-d’-sz"><a href="#print-‘数字的个数为：-d’-sz" class="headerlink" title="print(‘数字的个数为：%d’ % sz)"></a>print(‘数字的个数为：%d’ % sz)</h1><h1 id="print-‘其它字符的个数为：-d’-qt"><a href="#print-‘其它字符的个数为：-d’-qt" class="headerlink" title="print(‘其它字符的个数为：%d’ % qt)"></a>print(‘其它字符的个数为：%d’ % qt)</h1><pre><code>第三题
+</code></pre><p>#4、有字符串s = ‘alex’通过操作该字符串构造一个字符串s1 = ‘a_l_e_x’<br>s=’alex’<br>for i in range(len(s)):<br>if i&lt;len(s)-1:<br>print(s[i],end=’-‘)<br>else:<br>print(s[i])</p>
+<pre><code>第四题
+</code></pre><p>#5、有字符串s = ‘alex wusir’,通过操作该字符串构造一个列表li = [‘alex’,’wusir’]</p>
+<p>#方法一:split()通过指定分隔符对字符串进行切片,如果括号内不写，默认按空格对字符串切片,形成列表.</p>
+<h1 id="s-’alex-wusir’"><a href="#s-’alex-wusir’" class="headerlink" title="s =’alex wusir’"></a>s =’alex wusir’</h1><h1 id="li-s-split"><a href="#li-s-split" class="headerlink" title="li=s.split()"></a>li=s.split()</h1><h1 id="print-li"><a href="#print-li" class="headerlink" title="print(li)"></a>print(li)</h1><p>#方法二:找到空格切片<br>li=[]<br>s =’alex wusir’<br>for i in range(len(s)):<br>if s[i].isspace():<br>li.append(s[0:i])<br>li.append(s[i+1:len(s)])<br>print(li)<br>                            第五题</p>
+<p>#7、使用列表嵌套，完成8名老师随机分配3个办公室# 办公室三个office = [[], [], []]</p>
+<h1 id="八个老师teachers-“A”-“B”-“C”-“D”-“E”-“F”-“G”-“H”-输出第几间教室，有几个老师"><a href="#八个老师teachers-“A”-“B”-“C”-“D”-“E”-“F”-“G”-“H”-输出第几间教室，有几个老师" class="headerlink" title="八个老师teachers = [“A”, “B”, “C”, “D”, “E”, “F”, “G”, “H”]输出第几间教室，有几个老师"></a>八个老师teachers = [“A”, “B”, “C”, “D”, “E”, “F”, “G”, “H”]输出第几间教室，有几个老师</h1><p>office=[[],[],[]]<br>teachers = [“A”, “B”, “C”, “D”, “E”, “F”, “G”, “H”]<br>for i in teachers:<br>import random<br>b=random.randint(0,2)<br>office[b].append(i)<br>print(office)<br>for j in office:<br>print(‘第%d间教室，有%d个老师’ % (office.index(j)+1,len(j)))<br>                            第六题</p>
+<p>#1、截取特定区间的字符：</p>
+<h1 id="比如：s-‘ilove…-python’-截取中间的…"><a href="#比如：s-‘ilove…-python’-截取中间的…" class="headerlink" title="比如：s = ‘ilove….python’ 截取中间的…."></a>比如：s = ‘ilove….python’ 截取中间的….</h1><h1 id="s-’ilove…-python’"><a href="#s-’ilove…-python’" class="headerlink" title="s=’ilove….python’"></a>s=’ilove….python’</h1><h1 id="s-s-lstrip-‘ilove’"><a href="#s-s-lstrip-‘ilove’" class="headerlink" title="s=s.lstrip(‘ilove’)"></a>s=s.lstrip(‘ilove’)</h1><h1 id="s-s-rstrip-‘python’"><a href="#s-s-rstrip-‘python’" class="headerlink" title="s=s.rstrip(‘python’)"></a>s=s.rstrip(‘python’)</h1><h1 id="print-s"><a href="#print-s" class="headerlink" title="print(s)"></a>print(s)</h1>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/19/weektwo/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-week" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
