@@ -152,6 +152,69 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-cs" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/21/cs/">Python基础8——元组、字典的相关操作</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/21/cs/" class="archive-article-date">
+  	<time datetime="2018-07-21T12:10:47.190Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>要求:<br>打印省、市、县三级菜单<br>可返回上一级<br>可随时退出程序<br>list1=[{‘河南省’:{‘新乡市’:[‘原阳县’,’延津县’,’长垣县’],’濮阳市’:[‘大雷县’,’橙子县’,’辣条县’]}},{‘三亚’:{‘乡市’:[‘阳县’,’延县’,’长县’],’濮市’:[‘雷县’,’橙县’,’条县’]}}]<br>while True:<br>    ad=input(‘请输入你要查询的省，返回上一级请按A/a,退出请按Q/q：’).strip()<br>    if ad.upper()==’Q’:<br>        print(‘您已退出该程序’)<br>        break<br>    elif ad.upper()==’A’:<br>        print(‘返回上一级’)<br>    elif ad==’河南省’:<br>        for k in list1[0][‘河南省’]:<br>            print(k)<br>        while True:<br>            aa=input(‘请选择您所在的市：’)<br>            if aa.upper()==’A’:<br>                break<br>                ad=input(‘请输入你要查询的省，返回上一级请按A/a,退请按Q/q：’).strip()<br>            if aa==’新乡市’:<br>                print(‘您所在的市有如下县’)<br>                for x in list1[0][‘河南省’][‘新乡市’]:<br>                    print(x)<br>                print(‘已经是最后一页了亲爱的’)<br>            elif aa==’濮阳市’:<br>                print(‘您所在的市有如下县’)<br>                for x in list1[0][‘河南省’][‘濮阳市’]:<br>                    print(x)<br>                print(‘已经是最后一页了亲爱的’)<br>            else:<br>                print(‘您所查询的县不在河南省’)<br>    elif ad==’三亚’:<br>        for k in list1[1][‘三亚’]:<br>            print(k)<br>        while True:<br>            aa=input(‘请选择您所在的市：’)<br>            if aa.upper()==’A’:<br>                break<br>                ad=input(‘请输入你要查询的省，返回上一级请按A/a,退请按Q/q：’).strip()<br>            if aa==’乡市’:<br>                print(‘您所在的市有如下县’)<br>                for x in list1[1][‘三亚’][‘乡市’]:<br>                    print(x)<br>                print(‘已经是最后一页了亲爱的’)<br>            elif aa==’濮市’:<br>                print(‘您所在的市有如下县’)<br>                for x in list1[1][‘三亚’][‘濮市’]:<br>                    print(x)<br>                print(‘已经是最后一页了亲爱的’)<br>            else:<br>                print(‘您所查询的县不在三亚’)<br>    else:<br>        print(‘您所输入的省份不在当前范围’)    </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/21/cs/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Python_08" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
