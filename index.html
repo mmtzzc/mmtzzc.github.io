@@ -152,6 +152,121 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-ss2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="title-GitHub搭建个人技术博客"><a href="#title-GitHub搭建个人技术博客" class="headerlink" title="title:GitHub搭建个人技术博客 "></a>title:GitHub搭建个人技术博客 </h2><p>GitHub搭建个人技术博客<br>一、前期准备<br>1、GitHub账号<br>注册地址：<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a><br>2、Node.js环境<br>下载地址：<a href="https://nodejs.org/download/" target="_blank" rel="noopener">https://nodejs.org/download/</a><br>3、Git 软件：下载地址<a href="http://git-scm.com/download/" target="_blank" rel="noopener">http://git-scm.com/download/</a><br>二、软件安装<br>1、注册GitHub账号<br>1）Github账户注册和新建项目，项目必须要遵守格式：账户名.github.io，此处账号名作为后期个人博客的地址使用2。并且需要勾选Initialize this repository with a README。（如果没有勾选，后期要创建README文件即可）<br>2）创建一个新的repository(代码仓库), 注意，名称必须是xxx.github.io 格式，并且xxx必须是你在GitHub的用户名。</p>
+<p>3）在建好的项目右侧有个settings按钮，点击它，向下拉到GitHub Pages，你会看到那边有个网址，可以访问它。你将会惊奇的发现该项目已经被部署到网络上，能够通过外网来访问它。</p>
+<p>2、安装node.js<br>1）在node.js指定地址下载，采用最新的版本即可。</p>
+<p>2）进行安装，过程较为简单，step by step即可。</p>
+<p>选择同意，不选择不让安装….</p>
+<p>可以根据自己的设备情况，指定位置进行安装。</p>
+<p>常用组件，缺省安装就行，不需要自定义。</p>
+<p>大胆的点击Install按钮吧！</p>
+<p>顺利安装成功！！！<br>3、安装Git<br>1）指定位置，进行下载</p>
+<p>2）开始点击文件，进行安</p>
+<p>3）提示安装开始</p>
+<p>4）组件选择，缺省即可</p>
+<p>5）选择windows下命令模式，后续全部step by step，就可以大功告成了。</p>
+<p>6）在桌面点击右键，如下图所示，点击Git Bash Here，弹出交互界面，表示正确安装成功！</p>
+<p>配置流程<br>1、安装Hexo<br>Hexo是一款基于Node.js的静态博客框架。我们使用它来快速搭建博客界面和样式。<br>cd c:/hexo     # 在C盘下创建一个 文件夹，名字为hexo，用来存放Hexo模板和项目<br>npm install hexo-cli -g # 在hexo文件夹中，安装hexo框架（此处要求已经安装了node.js环境）<br>hexo init blog # 在hexo目录下，使用命令初始化一个名字为blog的目录，用来存放后续我们创建的博客内容<br>cd blog<br>npm install  # 进行Hexo的模板<br>hexo g  # 生成静态文件，会在当前目录下生成一个新的叫做public的文件夹<br>hexo s # 启动hexo服务，可以在本地浏览器中<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 查看</p>
+<p>2、hexo主题设置，这里以主题yilia为例进行说明。<br>1）安装主题（此处当前目录为blog）<br> hexo clean<br>git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia<br>2）启用主题<br>cd themes/yilia<br>git pull<br>3）修改配置文件<br>修改hexo目录下的_config.yml配置文件中的theme属性，将其设置为我们前面克隆下来的主体样式，此处theme: yilia（使用sublime打开没有乱码）<br>4）重启服务<br>hexo g  # 重新生成静态文件<br>hexo s # 启动本地web服务器<br>现在打开<a href="http://localhost:4000，会看到我们已经应用了一个新的主题。" target="_blank" rel="noopener">http://localhost:4000，会看到我们已经应用了一个新的主题。</a><br>三、部署到GitHub服务器<br>1、使用git命令行部署（optional）<br>    此处我们采用git命令来完成部署的工作。<br>（1）在C:\hexo\blog文件夹下创建.deploy<br>mkdir .deploy<br>（2）在cd d:/hexo/blog下克隆文件<br>git clone <a href="https://github.com/mmtzzc/mmtzzc.github.io" target="_blank" rel="noopener">https://github.com/mmtzzc/mmtzzc.github.io</a> /mmtzzc.github.io（在.deploy下执行，这是一行代码，如果没有新建.deploy文件夹可以在路径前面加上）<br>2、手动创建一个deploy.sh脚本文件，将下面代码保存到文件名为deploy.sh的文件中。<br>hexo generate<br>cp -R public/* .deploy/mmtzzc.github.io<br>cd .deploy/mmtzzc.github.io<br>git add .<br>git commit -m “update”<br>git push origin master</p>
+<p>简单解释一下，hexo generate生成public文件夹下的新内容，然后将其拷贝至Yihangran.github.io的git目录下，然后使用git commit命令提交代码到Yihangran.github.io这个repo的master branch上。</p>
+<p>需要部署的时候，执行这段脚本（$ ./deploy.sh）。执行过程中可能需要让你输入Github账户的用户名及密码，按照提示操作即可。<br>3、验证<br>打开浏览器，输入地址：<a href="https://Yihangran.github.io/，就可以看到我们的博客上线了！！！" target="_blank" rel="noopener">https://Yihangran.github.io/，就可以看到我们的博客上线了！！！</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/23/ss2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-week" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="title-weektwo"><a href="#title-weektwo" class="headerlink" title="title: weektwo"></a>title: weektwo</h2><h2 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h2><p>1、实现字符串反转 输入str=”string”输出’gnirts’<br> str1=”string”<br> str2=str1[::-1]<br> print(str2)</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/23/week/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-ss" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
