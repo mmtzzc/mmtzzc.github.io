@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018 | Hexo</title>
+  <title>GitHub搭建个人技术博客 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
+  <meta name="description" content="用函数实现购物车功能获取所有商品显示商品信息添加商品查询指定商品修改商品删除商品充值退出当前程序1.获取所有商品money=int(input(‘请输入您的资产：’))list1=[{‘name’:’口红’,’price’:’200’},{‘name’:’女包’,’price’:’150’},{‘name’:’鞋子’,’price’:’360’},{‘name’:’面膜’,’price’:’99’">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitHub搭建个人技术博客">
+<meta property="og:url" content="http://yoursite.com/2018/07/25/gwc/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="用函数实现购物车功能获取所有商品显示商品信息添加商品查询指定商品修改商品删除商品充值退出当前程序1.获取所有商品money=int(input(‘请输入您的资产：’))list1=[{‘name’:’口红’,’price’:’200’},{‘name’:’女包’,’price’:’150’},{‘name’:’鞋子’,’price’:’360’},{‘name’:’面膜’,’price’:’99’">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-25T11:10:15.970Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="GitHub搭建个人技术博客">
+<meta name="twitter:description" content="用函数实现购物车功能获取所有商品显示商品信息添加商品查询指定商品修改商品删除商品充值退出当前程序1.获取所有商品money=int(input(‘请输入您的资产：’))list1=[{‘name’:’口红’,’price’:’200’},{‘name’:’女包’,’price’:’150’},{‘name’:’鞋子’,’price’:’360’},{‘name’:’面膜’,’price’:’99’">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,184 +154,199 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-gwc" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      GitHub搭建个人技术博客
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/25/gwc/" class="archive-article-date">
+
+        
+        <a href="/2018/07/25/gwc/" class="archive-article-date">
   	<time datetime="2018-07-25T11:10:15.850Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-25</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/25/gwc/">GitHub搭建个人技术博客</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>用函数实现购物车功能<br>获取所有商品<br>显示商品信息<br>添加商品<br>查询指定商品<br>修改商品<br>删除商品<br>充值<br>退出当前程序<br>1.获取所有商品<br>money=int(input(‘请输入您的资产：’))<br>list1=[{‘name’:’口红’,’price’:’200’},{‘name’:’女包’,’price’:’150’},{‘name’:’鞋子’,’price’:’360’},{‘name’:’面膜’,’price’:’99’}]<br>def hqsp():<br>    for i,j in enumerate(list1,1):<br>        print(list1[i-1][‘name’])<br>2.显示商品信息<br>def spxx():<br>    for i,j in enumerate(list1,1):<br>        print(‘商品序号为%d, 商品名称为%s, 商品价格为%s’ % (i,list1[i-1][‘name’],list1[i-1][‘price’]))</p>
+<ol start="3">
+<li>添加商品<br>ss={‘name’:’’,’price’:’’}<br>def addsp(a):<br> list1.append(a)<br> print(list1)</li>
+<li>查询指定商品<br>def indexsp():<br> print(‘<strong><strong><strong><strong>*</strong></strong></strong></strong>商品列表<strong><strong><strong><strong>*</strong></strong></strong></strong>‘)<br> for i,j in enumerate(list1,1):<pre><code>print(&apos;商品序号为%d, 商品名称为%s, 商品价格为%s&apos; % (i,list1[i-1][&apos;name&apos;],list1[i-1][&apos;price&apos;]))
+</code></pre> l=int(input(‘请输入您要查询的商品序号：’))<br> print(‘您要查询的商品名称为%s,价格为%s’ % (list1[l-1][‘name’],list1[l-1][‘price’]))  </li>
+<li>修改商品<br>def xgsp():<br> for i,j in enumerate(list1,1):<pre><code>print(&apos;商品序号为%d, 商品名称为%s, 商品价格为%s&apos; % (i,list1[i-1][&apos;name&apos;],list1[i-1][&apos;price&apos;]))
+</code></pre> aa=int(input(‘请输入您要修改的产品下标：’))<br> list1[aa-1][‘name’]=input(‘请输入您的新商品名称:’)<br> list1[aa-1][‘price’]=input(‘请输入您的新商品价格：’)<br> print(list1)<br>6.删除商品<br>def scsp():<br> for i,j in enumerate(list1,1):<pre><code>print(&apos;商品序号为%d, 商品名称为%s, 商品价格为%s&apos; % (i,list1[i-1][&apos;name&apos;],list1[i-1][&apos;price&apos;]))
+</code></pre> bb=int(input(‘请输入您要删除的商品编号：’))<br> del list1[bb-1]<br> print(list1)<br>7.购买商品<br>def gm(cash):<br> for i,j in enumerate(list1,1):<pre><code>print(&apos;商品序号为%d, 商品名称为%s, 商品价格为%s&apos; % (i,list1[i-1][&apos;name&apos;],list1[i-1][&apos;price&apos;]))
+</code></pre> while True:<pre><code>mo=int(input(&apos;请输入您要购买的商品编号：&apos;))
+if int(list1[mo-1][&apos;price&apos;])&lt;=cash:
+    cash-=int(list1[mo-1][&apos;price&apos;])
+    li.append(list1[mo-1][&apos;name&apos;])
+    print(&apos;购买成功,您的余额为%d&apos; % cash)
+else:
+    print(&apos;您的余额为%d请充值&apos; % cash)
+    break
+</code></pre> return cash<br>8.充值<br>def money_cash(oldRmb,newRmb):<br> oldRmb+=newRmb<br> return oldRmb<br>ll=[ ]<br>li=[‘获取所有商品’,’显示商品信息’,’添加商品’,’查询指定商品’,’修改商品’,’删除商品’,’购买’,’充值’,’退出当前程序’]<br>for i,j in enumerate(li,1):<br> print(i,j)<br>while True:<br> num=input(‘请输入您所需功能的编号:’)<br> if num.isdigit():<pre><code>num=int(num)
+</code></pre> elif num.isalpha():<pre><code>break
+</code></pre> if num==1:<pre><code>print(&apos;**所有产品**&apos;)
+hqsp()
+</code></pre> if num==2:<pre><code>print(&apos;***************商品的所有信息*************&apos;)
+spxx()
+</code></pre> if num==3:<pre><code>print(&apos;欢迎来到添加商品页面&apos;.center(60,&apos;*&apos;))
+ss[&apos;name&apos;]=input(&apos;请输入您要添加的商品名称：&apos;).strip()
+ss[&apos;price&apos;]=input(&apos;请输入您添加商品的价格：&apos;)
+print(&apos;添加成功您目前的产品列表如下&apos;)
+addsp(ss)
+</code></pre> if num==4:<pre><code>indexsp()
+</code></pre> if num==5:<pre><code>print(&apos;欢迎来到修改商品页面&apos;.center(60,&apos;*&apos;))
+xgsp()   
+</code></pre> if num==6:<pre><code>print(&apos;欢迎来到删除商品页面&apos;.center(60,&apos;*&apos;))
+scsp()
+</code></pre> if num==7:<pre><code>print(&apos;欢迎来到购买页面&apos;.center(60,&apos;*&apos;))
+money=gm(money)
+</code></pre> if num==8:<pre><code>print(&apos;欢迎来到充值页面&apos;.center(60,&apos;*&apos;))
+money_chong=int(input(&apos;请输入你要充值的金额:&apos;))
+money=money_cash(money,money_chong)
+print(&apos;充值成功，现有余额：%d&apos; % money)
+</code></pre> if num==9:<pre><code>print(&apos;以下是您购买的商品列表&apos;)
+print(ll)
+print(&apos;退出成功&apos;)
+break
+</code></pre></li>
+</ol>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢打赏<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/25/gwc/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/23/ss2/" class="archive-article-date">
-  	<time datetime="2018-07-23T09:04:52.846Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/23/ss2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">GitHub搭建个人技术博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/23/ss2/">GitHub搭建个人技术博客</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/ss/" class="archive-article-date">
-  	<time datetime="2018-07-21T13:07:39.468Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/ss/">实现购物车功能</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/cs/" class="archive-article-date">
-  	<time datetime="2018-07-21T12:10:47.190Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/cs/">打印省市县三级菜单</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/Python_08/" class="archive-article-date">
-  	<time datetime="2018-07-21T11:54:56.544Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/Python_08/">Python基础8——元组、字典的相关操作</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/17/text/" class="archive-article-date">
-  	<time datetime="2018-07-17T07:51:35.052Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/17/text/">mmt</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -350,8 +369,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

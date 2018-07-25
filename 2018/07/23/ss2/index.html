@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>GitHub搭建个人技术博客 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="GitHub搭建个人技术博客一、前期准备1、GitHub账号注册地址：https://github.com/2、Node.js环境下载地址：https://nodejs.org/download/3、Git 软件：下载地址http://git-scm.com/download/二、软件安装1、注册GitHub账号1）Github账户注册和新建项目，项目必须要遵守格式：账户名.github.io，此">
+  <meta name="description" content="用函数实现购物车功能获取所有商品显示商品信息添加商品查询指定商品修改商品删除商品充值退出当前程序1.获取所有商品money=int(input(‘请输入您的资产：’))list1=[{‘name’:’口红’,’price’:’200’},{‘name’:’女包’,’price’:’150’},{‘name’:’鞋子’,’price’:’360’},{‘name’:’面膜’,’price’:’99’">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GitHub搭建个人技术博客">
 <meta property="og:url" content="http://yoursite.com/2018/07/23/ss2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="GitHub搭建个人技术博客一、前期准备1、GitHub账号注册地址：https://github.com/2、Node.js环境下载地址：https://nodejs.org/download/3、Git 软件：下载地址http://git-scm.com/download/二、软件安装1、注册GitHub账号1）Github账户注册和新建项目，项目必须要遵守格式：账户名.github.io，此">
+<meta property="og:description" content="用函数实现购物车功能获取所有商品显示商品信息添加商品查询指定商品修改商品删除商品充值退出当前程序1.获取所有商品money=int(input(‘请输入您的资产：’))list1=[{‘name’:’口红’,’price’:’200’},{‘name’:’女包’,’price’:’150’},{‘name’:’鞋子’,’price’:’360’},{‘name’:’面膜’,’price’:’99’">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-23T09:10:07.622Z">
+<meta property="og:updated_time" content="2018-07-25T11:09:41.729Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GitHub搭建个人技术博客">
-<meta name="twitter:description" content="GitHub搭建个人技术博客一、前期准备1、GitHub账号注册地址：https://github.com/2、Node.js环境下载地址：https://nodejs.org/download/3、Git 软件：下载地址http://git-scm.com/download/二、软件安装1、注册GitHub账号1）Github账户注册和新建项目，项目必须要遵守格式：账户名.github.io，此">
+<meta name="twitter:description" content="用函数实现购物车功能获取所有商品显示商品信息添加商品查询指定商品修改商品删除商品充值退出当前程序1.获取所有商品money=int(input(‘请输入您的资产：’))list1=[{‘name’:’口红’,’price’:’200’},{‘name’:’女包’,’price’:’150’},{‘name’:’鞋子’,’price’:’360’},{‘name’:’面膜’,’price’:’99’">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -174,24 +174,50 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>GitHub搭建个人技术博客<br>一、前期准备<br>1、GitHub账号<br>注册地址：<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a><br>2、Node.js环境<br>下载地址：<a href="https://nodejs.org/download/" target="_blank" rel="noopener">https://nodejs.org/download/</a><br>3、Git 软件：下载地址<a href="http://git-scm.com/download/" target="_blank" rel="noopener">http://git-scm.com/download/</a><br>二、软件安装<br>1、注册GitHub账号<br>1）Github账户注册和新建项目，项目必须要遵守格式：账户名.github.io，此处账号名作为后期个人博客的地址使用2。并且需要勾选Initialize this repository with a README。（如果没有勾选，后期要创建README文件即可）<br>2）创建一个新的repository(代码仓库), 注意，名称必须是xxx.github.io 格式，并且xxx必须是你在GitHub的用户名。</p>
-<p>3）在建好的项目右侧有个settings按钮，点击它，向下拉到GitHub Pages，你会看到那边有个网址，可以访问它。你将会惊奇的发现该项目已经被部署到网络上，能够通过外网来访问它。</p>
-<p>2、安装node.js<br>1）在node.js指定地址下载，采用最新的版本即可。</p>
-<p>2）进行安装，过程较为简单，step by step即可。</p>
-<p>选择同意，不选择不让安装….</p>
-<p>可以根据自己的设备情况，指定位置进行安装。</p>
-<p>常用组件，缺省安装就行，不需要自定义。</p>
-<p>大胆的点击Install按钮吧！</p>
-<p>顺利安装成功！！！<br>3、安装Git<br>1）指定位置，进行下载</p>
-<p>2）开始点击文件，进行安</p>
-<p>3）提示安装开始</p>
-<p>4）组件选择，缺省即可</p>
-<p>5）选择windows下命令模式，后续全部step by step，就可以大功告成了。</p>
-<p>6）在桌面点击右键，如下图所示，点击Git Bash Here，弹出交互界面，表示正确安装成功！</p>
-<p>配置流程<br>1、安装Hexo<br>Hexo是一款基于Node.js的静态博客框架。我们使用它来快速搭建博客界面和样式。<br>cd c:/hexo     # 在C盘下创建一个 文件夹，名字为hexo，用来存放Hexo模板和项目<br>npm install hexo-cli -g # 在hexo文件夹中，安装hexo框架（此处要求已经安装了node.js环境）<br>hexo init blog # 在hexo目录下，使用命令初始化一个名字为blog的目录，用来存放后续我们创建的博客内容<br>cd blog<br>npm install  # 进行Hexo的模板<br>hexo g  # 生成静态文件，会在当前目录下生成一个新的叫做public的文件夹<br>hexo s # 启动hexo服务，可以在本地浏览器中<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 查看</p>
-<p>2、hexo主题设置，这里以主题yilia为例进行说明。<br>1）安装主题（此处当前目录为blog）<br> hexo clean<br>git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia<br>2）启用主题<br>cd themes/yilia<br>git pull<br>3）修改配置文件<br>修改hexo目录下的_config.yml配置文件中的theme属性，将其设置为我们前面克隆下来的主体样式，此处theme: yilia（使用sublime打开没有乱码）<br>4）重启服务<br>hexo g  # 重新生成静态文件<br>hexo s # 启动本地web服务器<br>现在打开<a href="http://localhost:4000，会看到我们已经应用了一个新的主题。" target="_blank" rel="noopener">http://localhost:4000，会看到我们已经应用了一个新的主题。</a><br>三、部署到GitHub服务器<br>1、使用git命令行部署（optional）<br>    此处我们采用git命令来完成部署的工作。<br>（1）在C:\hexo\blog文件夹下创建.deploy<br>mkdir .deploy<br>（2）在cd d:/hexo/blog下克隆文件<br>git clone <a href="https://github.com/mmtzzc/mmtzzc.github.io" target="_blank" rel="noopener">https://github.com/mmtzzc/mmtzzc.github.io</a> /mmtzzc.github.io（在.deploy下执行，这是一行代码，如果没有新建.deploy文件夹可以在路径前面加上）<br>2、手动创建一个deploy.sh脚本文件，将下面代码保存到文件名为deploy.sh的文件中。<br>hexo generate<br>cp -R public/* .deploy/mmtzzc.github.io<br>cd .deploy/mmtzzc.github.io<br>git add .<br>git commit -m “update”<br>git push origin master</p>
-<p>简单解释一下，hexo generate生成public文件夹下的新内容，然后将其拷贝至Yihangran.github.io的git目录下，然后使用git commit命令提交代码到Yihangran.github.io这个repo的master branch上。</p>
-<p>需要部署的时候，执行这段脚本（$ ./deploy.sh）。执行过程中可能需要让你输入Github账户的用户名及密码，按照提示操作即可。<br>3、验证<br>打开浏览器，输入地址：<a href="https://Yihangran.github.io/，就可以看到我们的博客上线了！！！" target="_blank" rel="noopener">https://Yihangran.github.io/，就可以看到我们的博客上线了！！！</a></p>
+        <p>用函数实现购物车功能<br>获取所有商品<br>显示商品信息<br>添加商品<br>查询指定商品<br>修改商品<br>删除商品<br>充值<br>退出当前程序<br>1.获取所有商品<br>money=int(input(‘请输入您的资产：’))<br>list1=[{‘name’:’口红’,’price’:’200’},{‘name’:’女包’,’price’:’150’},{‘name’:’鞋子’,’price’:’360’},{‘name’:’面膜’,’price’:’99’}]<br>def hqsp():<br>    for i,j in enumerate(list1,1):<br>        print(list1[i-1][‘name’])<br>2.显示商品信息<br>def spxx():<br>    for i,j in enumerate(list1,1):<br>        print(‘商品序号为%d, 商品名称为%s, 商品价格为%s’ % (i,list1[i-1][‘name’],list1[i-1][‘price’]))</p>
+<ol start="3">
+<li>添加商品<br>ss={‘name’:’’,’price’:’’}<br>def addsp(a):<br> list1.append(a)<br> print(list1)</li>
+<li>查询指定商品<br>def indexsp():<br> print(‘<strong><strong><strong><strong>*</strong></strong></strong></strong>商品列表<strong><strong><strong><strong>*</strong></strong></strong></strong>‘)<br> for i,j in enumerate(list1,1):<pre><code>print(&apos;商品序号为%d, 商品名称为%s, 商品价格为%s&apos; % (i,list1[i-1][&apos;name&apos;],list1[i-1][&apos;price&apos;]))
+</code></pre> l=int(input(‘请输入您要查询的商品序号：’))<br> print(‘您要查询的商品名称为%s,价格为%s’ % (list1[l-1][‘name’],list1[l-1][‘price’]))  </li>
+<li>修改商品<br>def xgsp():<br> for i,j in enumerate(list1,1):<pre><code>print(&apos;商品序号为%d, 商品名称为%s, 商品价格为%s&apos; % (i,list1[i-1][&apos;name&apos;],list1[i-1][&apos;price&apos;]))
+</code></pre> aa=int(input(‘请输入您要修改的产品下标：’))<br> list1[aa-1][‘name’]=input(‘请输入您的新商品名称:’)<br> list1[aa-1][‘price’]=input(‘请输入您的新商品价格：’)<br> print(list1)<br>6.删除商品<br>def scsp():<br> for i,j in enumerate(list1,1):<pre><code>print(&apos;商品序号为%d, 商品名称为%s, 商品价格为%s&apos; % (i,list1[i-1][&apos;name&apos;],list1[i-1][&apos;price&apos;]))
+</code></pre> bb=int(input(‘请输入您要删除的商品编号：’))<br> del list1[bb-1]<br> print(list1)<br>7.购买商品<br>def gm(cash):<br> for i,j in enumerate(list1,1):<pre><code>print(&apos;商品序号为%d, 商品名称为%s, 商品价格为%s&apos; % (i,list1[i-1][&apos;name&apos;],list1[i-1][&apos;price&apos;]))
+</code></pre> while True:<pre><code>mo=int(input(&apos;请输入您要购买的商品编号：&apos;))
+if int(list1[mo-1][&apos;price&apos;])&lt;=cash:
+    cash-=int(list1[mo-1][&apos;price&apos;])
+    li.append(list1[mo-1][&apos;name&apos;])
+    print(&apos;购买成功,您的余额为%d&apos; % cash)
+else:
+    print(&apos;您的余额为%d请充值&apos; % cash)
+    break
+</code></pre> return cash<br>8.充值<br>def money_cash(oldRmb,newRmb):<br> oldRmb+=newRmb<br> return oldRmb<br>ll=[ ]<br>li=[‘获取所有商品’,’显示商品信息’,’添加商品’,’查询指定商品’,’修改商品’,’删除商品’,’购买’,’充值’,’退出当前程序’]<br>for i,j in enumerate(li,1):<br> print(i,j)<br>while True:<br> num=input(‘请输入您所需功能的编号:’)<br> if num.isdigit():<pre><code>num=int(num)
+</code></pre> elif num.isalpha():<pre><code>break
+</code></pre> if num==1:<pre><code>print(&apos;**所有产品**&apos;)
+hqsp()
+</code></pre> if num==2:<pre><code>print(&apos;***************商品的所有信息*************&apos;)
+spxx()
+</code></pre> if num==3:<pre><code>print(&apos;欢迎来到添加商品页面&apos;.center(60,&apos;*&apos;))
+ss[&apos;name&apos;]=input(&apos;请输入您要添加的商品名称：&apos;).strip()
+ss[&apos;price&apos;]=input(&apos;请输入您添加商品的价格：&apos;)
+print(&apos;添加成功您目前的产品列表如下&apos;)
+addsp(ss)
+</code></pre> if num==4:<pre><code>indexsp()
+</code></pre> if num==5:<pre><code>print(&apos;欢迎来到修改商品页面&apos;.center(60,&apos;*&apos;))
+xgsp()   
+</code></pre> if num==6:<pre><code>print(&apos;欢迎来到删除商品页面&apos;.center(60,&apos;*&apos;))
+scsp()
+</code></pre> if num==7:<pre><code>print(&apos;欢迎来到购买页面&apos;.center(60,&apos;*&apos;))
+money=gm(money)
+</code></pre> if num==8:<pre><code>print(&apos;欢迎来到充值页面&apos;.center(60,&apos;*&apos;))
+money_chong=int(input(&apos;请输入你要充值的金额:&apos;))
+money=money_cash(money,money_chong)
+print(&apos;充值成功，现有余额：%d&apos; % money)
+</code></pre> if num==9:<pre><code>print(&apos;以下是您购买的商品列表&apos;)
+print(ll)
+print(&apos;退出成功&apos;)
+break
+</code></pre></li>
+</ol>
 
       
 
@@ -284,6 +310,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/07/25/gwc/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          GitHub搭建个人技术博客
+        
+      </div>
+    </a>
   
   
     <a href="/2018/07/21/ss/" id="article-nav-older" class="article-nav-link-wrap">
