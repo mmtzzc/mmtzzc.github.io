@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018/7 | Hexo</title>
+  <title>博客园小案例 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2018/07/index.html">
+  <meta name="description" content="启动程序，首页面应该显示成如下格式：     欢迎来到博客园首页     1:请登录     2:请注册     3:文章页面     4:日记页面     5:评论页面     6:收藏页面     7:注销     8:退出程序(2)，用户输入选项，3~8选项必须在用户登录成功之后，才能访问成功。(3)，用户选择登录，用户名密码从字典中读取验证，三次机会，没成功则结束整个程序运行，成功之后，可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客园小案例">
+<meta property="og:url" content="http://yoursite.com/2018/07/30/bky/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="启动程序，首页面应该显示成如下格式：     欢迎来到博客园首页     1:请登录     2:请注册     3:文章页面     4:日记页面     5:评论页面     6:收藏页面     7:注销     8:退出程序(2)，用户输入选项，3~8选项必须在用户登录成功之后，才能访问成功。(3)，用户选择登录，用户名密码从字典中读取验证，三次机会，没成功则结束整个程序运行，成功之后，可">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-30T03:32:20.810Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="博客园小案例">
+<meta name="twitter:description" content="启动程序，首页面应该显示成如下格式：     欢迎来到博客园首页     1:请登录     2:请注册     3:文章页面     4:日记页面     5:评论页面     6:收藏页面     7:注销     8:退出程序(2)，用户输入选项，3~8选项必须在用户登录成功之后，才能访问成功。(3)，用户选择登录，用户名密码从字典中读取验证，三次机会，没成功则结束整个程序运行，成功之后，可">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,211 +154,170 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-bky" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      博客园小案例
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/30/bky/" class="archive-article-date">
+
+        
+        <a href="/2018/07/30/bky/" class="archive-article-date">
   	<time datetime="2018-07-30T03:29:45.232Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/30/bky/">博客园小案例</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>启动程序，首页面应该显示成如下格式：<br>     欢迎来到博客园首页<br>     1:请登录<br>     2:请注册<br>     3:文章页面<br>     4:日记页面<br>     5:评论页面<br>     6:收藏页面<br>     7:注销<br>     8:退出程序<br>(2)，用户输入选项，3~8选项必须在用户登录成功之后，才能访问成功。<br>(3)，用户选择登录，用户名密码从字典中读取验证，三次机会，没成功则结束整个程序运行，成功之后，可以选择访问3~6项，访问页面之前，必须要在打印信息，  格式为–&gt;用户:xx 在xx年xx月xx日 执行了 %s操作，访问页面时，页面内容为：欢  迎xx用户访问评论（文章，日记，收藏）页面<br>(4)，如果用户没有注册，则可以选择注册，注册成功之后，可以自动完成登录（完成自动登录+5分），然后进入首页选择。<br>(5)，注销用户是指注销用户的登录状态，使其在访问任何页面时，必须重新登录。<br>(6)，退出程序为结束整个程序运行。</p>
+<p>#1登录<br>user_status = {‘username’: None,’status’: False}<br>list1=[{‘name’:’马梅婷’,’psw’:’123456’},{‘name’:’大雷’,’psw’:’654321’},{‘name’:’小橙子’,’psw’:’5498’}]<br>dict1={‘name’:’’,’psw’:’’}<br>def dl():<br>    counts=1<br>    while counts &lt;= 3:<br>        if user_status[‘status’]==True:<br>            print(‘您已登录一个账号不能重复登录’)<br>            break<br>        dict1[‘name’]=input(‘请输入用户名：’)<br>        dict1[‘psw’]=input(‘请输入密码：’)<br>        if dict1 in list1:<br>            print(‘登录成功’)<br>            user_status[‘username’]=dict1[‘name’]<br>            user_status[‘status’]=True<br>            break<br>        else:<br>            if counts&lt;3:<br>                print(‘用户名或密码错误,请重新登录’)<br>            elif  counts==3:<br>                print(‘错误超过三次账号已被锁定’)<br>        counts+=1<br>def zc():<br>    if user_status[‘status’]==True:<br>        print(‘您已登录一个账号不能重复登录’)<br>    else:<br>        dict2={‘name’:’’,’psw’:’’}<br>        dict2[‘name’]=input(‘请输入用户名：’)<br>        dict2[‘psw’]=input(‘请输入密码：’)<br>        dict1[‘name’]=dict2[‘name’]<br>        list1.append(dict2)<br>        user_status[‘status’]=True<br>        print(list1)<br>        return dict2</p>
+<p>#3:文章页面<br>def wz():<br>    if user_status[‘status’]==True:<br>        import datetime<br>        print(‘用户:%s在%d年%d月%d日 执行了 %s操作’ % (dict1[‘name’],datetime.datetime.now().year,datetime.datetime.now().month,datetime.datetime.now().day,’阅读文章’))<br>        print(‘欢迎来到文章页面’.center(50,’*’))<br>        print(‘欢迎%s访问文章页面’ % dict1[‘name’])<br>    else:<br>        print(‘请先登录’)</p>
+<p>#4:日记页面<br>def rj():<br>    if user_status[‘status’]==True:<br>        import datetime<br>        print(‘用户:%s在%d年%d月%d日 执行了 %s操作’ % (dict1[‘name’],datetime.datetime.now().year,datetime.datetime.now().month,datetime.datetime.now().day,’日记’))<br>        print(‘欢迎来到日记页面’.center(50,’*’))<br>        print(‘欢迎%s访问日记页面’ % dict1[‘name’])</p>
+<pre><code>else:
+    print(&apos;请先登录&apos;)
+</code></pre><p>#5：评论页面<br>def pl():<br>    if user_status[‘status’]==True:<br>        import datetime</p>
+<pre><code>    print(&apos;用户:%s在%d年%d月%d日 执行了 %s操作&apos; % (dict1[&apos;name&apos;],datetime.datetime.now().year,datetime.datetime.now().month,datetime.datetime.now().day,&apos;评论&apos;))
+    print(&apos;欢迎来到评论页面&apos;.center(50,&apos;*&apos;))
+    print(&apos;欢迎%s访问评论页面&apos; % dict1[&apos;name&apos;])
+else:
+    print(&apos;请先登录&apos;)
+</code></pre><p>#6：收藏页面<br>def sc():<br>    if user_status[‘status’]==True:<br>        import datetime<br>        print(‘用户:%s在%d年%d月%d日 执行了 %s操作’ % (dict1[‘name’],datetime.datetime.now().year,datetime.datetime.now().month,datetime.datetime.now().day,’收藏’))<br>        print(‘欢迎来到收藏页面’.center(50,’*’))<br>        print(‘欢迎%s访问收藏页面’ % dict1[‘name’])<br>    else:<br>        print(‘请先登录’)</p>
+<p>#注销<br>def zx():<br>    print(‘欢迎来到注销页面’.center(50,’*’))<br>    if user_status[‘status’]==False:<br>        print(‘您还未登录，不能进行注销操作’)<br>    else:<br>        user_status[‘status’]=False<br>        print(‘注销成功下次请重新登录’)</p>
+<p>li=[‘请登录’,’请注册’,’文章页面’,’日记页面’,’评论页面’,’收藏页面’,’注销’,’退出程序’]<br>print(‘欢迎来到博客园首页’.center(50,’<em>‘))<br>for i,j in enumerate(li,1):<br>    print(i,j)<br>print(‘请注册并登录，登录成功可以访问3~8’.center(47,’</em>‘))<br>while True:<br>    bh=int(input(‘请输入您需要的功能编号：’))<br>    if bh==1:<br>        print(‘欢迎来到登录页面’.center(50,’<em>‘))<br>        dl()<br>    elif bh==2:<br>        print(‘欢迎来到注册页面’.center(50,’</em>‘))<br>        zc()<br>    elif bh==3:<br>        wz()<br>    elif bh==4:<br>        rj()<br>    elif bh==5:<br>        pl()<br>    elif bh==6:<br>        sc()<br>    elif bh==7:<br>        zx()<br>    elif bh==8:<br>        break<br>        print(‘您已退出程序’)<br>    else:<br>        print(‘没有当前操作’)</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢打赏<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/30/bky/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/25/gwc/" class="archive-article-date">
-  	<time datetime="2018-07-25T11:10:15.850Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-25</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/25/gwc/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">用函数实现购物车功能</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/25/gwc/">用函数实现购物车功能</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/23/ss2/" class="archive-article-date">
-  	<time datetime="2018-07-23T09:04:52.846Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/23/ss2/">GitHub搭建个人技术博客</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/ss/" class="archive-article-date">
-  	<time datetime="2018-07-21T13:07:39.468Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/ss/">实现购物车功能</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/cs/" class="archive-article-date">
-  	<time datetime="2018-07-21T12:10:47.190Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/cs/">打印省市县三级菜单</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/Python_08/" class="archive-article-date">
-  	<time datetime="2018-07-21T11:54:56.544Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/Python_08/">Python基础8——元组、字典的相关操作</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/17/text/" class="archive-article-date">
-  	<time datetime="2018-07-17T07:51:35.052Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/17/text/">mmt</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -377,8 +340,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
