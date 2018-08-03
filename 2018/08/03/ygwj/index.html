@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>对员工的姓名和工资进行如下操作（文件版） | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="1.查询 2.修改 3.增加 4.删除 5.退出list1=[‘查询’, ‘修改’, ‘增加’,’删除’, ‘退出’] 查询def indexx():    l6=[]    f1=open(‘infor1.txt’,’r’,encoding=’UTF-8’)    while True:        dict6={}        res=f1.readline()        if res">
+<meta property="og:type" content="article">
+<meta property="og:title" content="对员工的姓名和工资进行如下操作（文件版）">
+<meta property="og:url" content="http://yoursite.com/2018/08/03/ygwj/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1.查询 2.修改 3.增加 4.删除 5.退出list1=[‘查询’, ‘修改’, ‘增加’,’删除’, ‘退出’] 查询def indexx():    l6=[]    f1=open(‘infor1.txt’,’r’,encoding=’UTF-8’)    while True:        dict6={}        res=f1.readline()        if res">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-03T11:39:25.193Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="对员工的姓名和工资进行如下操作（文件版）">
+<meta name="twitter:description" content="1.查询 2.修改 3.增加 4.删除 5.退出list1=[‘查询’, ‘修改’, ‘增加’,’删除’, ‘退出’] 查询def indexx():    l6=[]    f1=open(‘infor1.txt’,’r’,encoding=’UTF-8’)    while True:        dict6={}        res=f1.readline()        if res">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,238 +154,184 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-ygwj" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      对员工的姓名和工资进行如下操作（文件版）
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/03/ygwj/" class="archive-article-date">
+
+        
+        <a href="/2018/08/03/ygwj/" class="archive-article-date">
   	<time datetime="2018-08-03T11:38:17.066Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-03</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/03/ygwj/">对员工的姓名和工资进行如下操作（文件版）</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.查询 2.修改 3.增加 4.删除 5.退出<br>list1=[‘查询’, ‘修改’, ‘增加’,’删除’, ‘退出’]</p>
+<h1 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h1><p>def indexx():<br>    l6=[]<br>    f1=open(‘infor1.txt’,’r’,encoding=’UTF-8’)<br>    while True:<br>        dict6={}<br>        res=f1.readline()<br>        if res==’’:<br>            break<br>        else:<br>            res1=res.strip(‘\n’)<br>            res2=res1.split(‘,’)<br>            dict6[‘name’]=res2[0]<br>            dict6[‘money’]=res2[1]<br>            l6.append(dict6)<br>    print(l6) </p>
+<p>#修改<br>def replace():<br>    while True:<br>        dict_r={}<br>        f1=open(‘infor1.txt’,’r+’,encoding=’UTF-8’)<br>        rr=input(‘请输入您要修改的员工姓名,q退出:’)<br>        while True:<br>            res=f1.readline()<br>            if res==’’:<br>                break<br>            else:<br>                res.strip().split(‘,’)<br>                dict_r[res.strip().split(‘,’)[0]]=res.strip().split(‘,’)[1]</p>
+<pre><code># print(dict_r)
+if rr in dict_r.keys():
+    money=int(input(&apos;请输入{}的新工资:&apos;.format(rr)))
+    dict_r[rr]=money
+    srt1=&apos;&apos;
+    for i,j in dict_r.items():
+        srt1+=i+&apos;,&apos;+str(j)+&apos;\n&apos;
+    # print(srt1)
+    f1=open(&apos;infor1.txt&apos;,&apos;w+&apos;,encoding=&apos;UTF-8&apos;)
+    f1.write(srt1)
+    print(&apos;修改成功&apos;)
+    f1.close()
+elif rr==&apos;q&apos;:
+    break 
+else:
+    print(&apos;此员工不存在&apos;) 
+</code></pre><p>#添加<br>def add():<br>    flag=False<br>    addu=input(‘请输入您要增加的员工姓名：’).strip()<br>    addp=input(‘请输入您要增加的员工工资：’).strip()<br>    f1=open(‘infor1.txt’,’a+’,encoding=’UTF-8’)<br>    f1.write(addu+’,’+addp+’\n’)<br>    print(‘添加成功’)<br>    f1.close()</p>
+<p>#删除<br>def dell():<br>    ld=[]<br>    dict2={}<br>    uu=input(‘请输入您要删除的员工姓名：’)<br>    f1=open(‘infor1.txt’,’r+’,encoding=’UTF-8’)<br>    f1.seek(0)<br>    while True:<br>        res=f1.readline()<br>        if res==’’:<br>            break<br>        else:<br>            res=res.strip(‘\n’)<br>            res=res.split(‘,’)<br>            dict2[res[0]]=res[1]<br>    if uu in dict2.keys():<br>        dict2.pop(uu)<br>        str2=’’<br>        for i,j in dict2.items():<br>            str2+=i+’,’+str(j)+’\n’</p>
+<pre><code>    # print(str2)
+    f1=open(&apos;infor1.txt&apos;,&apos;w+&apos;,encoding=&apos;UTF-8&apos;)
+    f1.write(str2)
+    print(&apos;删除成功&apos;)
+    f1.close()
+else:
+    print(&apos;此员工不存在不能进行删除操作&apos;)
+</code></pre><p>while True:<br>    for i,j in enumerate(list1,1):<br>        print(i,j)<br>    bh=input(‘请输入您的选择:’)<br>    if bh.isdigit():<br>        bh=int(bh)<br>        if bh==1:<br>            indexx()<br>        elif bh==2:<br>            replace()<br>        elif bh==3:<br>            add()<br>        elif bh==4:<br>            dell()<br>        elif bh==5:<br>            exit()<br>        else:<br>            print(‘没有当前操作’)<br>    else:<br>        print(‘编号应为一个数字’)</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢打赏<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/03/ygwj/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/30/bky/" class="archive-article-date">
-  	<time datetime="2018-07-30T03:29:45.232Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/30/bky/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">博客园小案例</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/30/bky/">博客园小案例</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/25/gwc/" class="archive-article-date">
-  	<time datetime="2018-07-25T11:10:15.850Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/25/gwc/">用函数实现购物车功能</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/23/ss2/" class="archive-article-date">
-  	<time datetime="2018-07-23T09:04:52.846Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/23/ss2/">GitHub搭建个人技术博客</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/ss/" class="archive-article-date">
-  	<time datetime="2018-07-21T13:07:39.468Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/ss/">实现购物车功能</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/cs/" class="archive-article-date">
-  	<time datetime="2018-07-21T12:10:47.190Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/cs/">打印省市县三级菜单</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/Python_08/" class="archive-article-date">
-  	<time datetime="2018-07-21T11:54:56.544Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/Python_08/">Python基础8——元组、字典的相关操作</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/17/text/" class="archive-article-date">
-  	<time datetime="2018-07-17T07:51:35.052Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/17/text/">mmt</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -404,8 +354,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
