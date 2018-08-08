@@ -152,6 +152,70 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-xx" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/08/xx/">学校类，教师类，学生类</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/08/xx/" class="archive-article-date">
+  	<time datetime="2018-08-08T10:23:42.717Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>定义一个学校类，学校类里面有，姓名，年龄，性别，获取成员信息方法<br>教师类：继承学校类，添加薪资，课程属性；添加教授课程方法<br>学生类：继承学校类，添加课程，学费；添加打印课程的方法<br>class School():<br>    def <strong>init</strong>(self,name,sex,age):<br>        self.name=name<br>        self.sex=sex<br>        self.age=age<br>    def oop(self):<br>        print(‘欢迎：{}’.format(self.name))<br>    def output(self):<br>        print(‘info{}’.format(self.name).center(60,’<em>‘))<br>        for i,j in self.<strong>dict</strong>.items():<br>            print(i,j)<br>        print(‘end’.center(60,”</em>“))<br>class Student(School):<br>    def <strong>init</strong>(self,name,sex,age,course,tuition):<br>        School.<strong>init</strong>(self,name,sex,age)<br>        self.course=course<br>        self.tuition=tuition<br>        self.oop()<br>    def mm(self,mon):<br>        self.tuition-=mon<br>        print(‘还需要教{}钱’.format(self.tuition))</p>
+<p>class Teacher(School):<br>    def <strong>init</strong>(self,name,sex,age,course,salary):<br>        School.<strong>init</strong>(self,name,sex,age)<br>        self.course=course<br>        self.salary=salary<br>        self.oop()<br>    def <strong>str</strong>(self):<br>        return ‘这个老师是{}，他教的课程是{}’.format(self.name,self.course)<br>s=Student(‘韩梅梅’,’女’,20,’艺术’,8900)<br>te=Teacher(‘马老师’,’男’,56,’艺术’,18900)<br>s.mm(100)<br>s.mm(100)<br>s.mm(100)<br>s.output()<br>te.output()</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/08/xx/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-mjj" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -860,69 +924,10 @@ break
 
 
   
-    <article id="post-text" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/17/text/">mmt</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/17/text/" class="archive-article-date">
-  	<time datetime="2018-07-17T07:51:35.052Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>字符串大小写转换<br>查找字符出现的位置<br>字符串内容检测<br>字符串的分隔（截取）<br>字符串的替换<br>字符串的映射</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/17/text/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 

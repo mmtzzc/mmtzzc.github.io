@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>买家具案例（面向对象） | Hexo</title>
+  <title>学校类，教师类，学生类 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="买家具房子（多大，户型，位置） 买家具，床（类型，尺寸）原来的房子面积128   如何把床的面积传到房子中房子的类class Home:    def init(self,size,type,add):        self.s=size #房子的大小，户型，位置        self.t=type        self.a=add        self.d=size  #房子还剩多少平，">
+  <meta name="description" content="定义一个学校类，学校类里面有，姓名，年龄，性别，获取成员信息方法教师类：继承学校类，添加薪资，课程属性；添加教授课程方法学生类：继承学校类，添加课程，学费；添加打印课程的方法class School():    def init(self,name,sex,age):        self.name=name        self.sex=sex        self.age=age">
 <meta property="og:type" content="article">
-<meta property="og:title" content="买家具案例（面向对象）">
-<meta property="og:url" content="http://yoursite.com/2018/08/07/mjj/index.html">
+<meta property="og:title" content="学校类，教师类，学生类">
+<meta property="og:url" content="http://yoursite.com/2018/08/08/xx/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="买家具房子（多大，户型，位置） 买家具，床（类型，尺寸）原来的房子面积128   如何把床的面积传到房子中房子的类class Home:    def init(self,size,type,add):        self.s=size #房子的大小，户型，位置        self.t=type        self.a=add        self.d=size  #房子还剩多少平，">
+<meta property="og:description" content="定义一个学校类，学校类里面有，姓名，年龄，性别，获取成员信息方法教师类：继承学校类，添加薪资，课程属性；添加教授课程方法学生类：继承学校类，添加课程，学费；添加打印课程的方法class School():    def init(self,name,sex,age):        self.name=name        self.sex=sex        self.age=age">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-07T09:46:31.511Z">
+<meta property="og:updated_time" content="2018-08-08T10:23:42.903Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="买家具案例（面向对象）">
-<meta name="twitter:description" content="买家具房子（多大，户型，位置） 买家具，床（类型，尺寸）原来的房子面积128   如何把床的面积传到房子中房子的类class Home:    def init(self,size,type,add):        self.s=size #房子的大小，户型，位置        self.t=type        self.a=add        self.d=size  #房子还剩多少平，">
+<meta name="twitter:title" content="学校类，教师类，学生类">
+<meta name="twitter:description" content="定义一个学校类，学校类里面有，姓名，年龄，性别，获取成员信息方法教师类：继承学校类，添加薪资，课程属性；添加教授课程方法学生类：继承学校类，添加课程，学费；添加打印课程的方法class School():    def init(self,name,sex,age):        self.name=name        self.sex=sex        self.age=age">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,27 +154,28 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-mjj" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-xx" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      买家具案例（面向对象）
+      学校类，教师类，学生类
     </h1>
   
 
         
-        <a href="/2018/08/07/mjj/" class="archive-article-date">
-  	<time datetime="2018-08-07T09:46:31.336Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-07</time>
+        <a href="/2018/08/08/xx/" class="archive-article-date">
+  	<time datetime="2018-08-08T10:23:42.717Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>买家具<br>房子（多大，户型，位置） 买家具，床（类型，尺寸）原来的房子面积128   如何把床的面积传到房子中<br>房子的类<br>class Home:<br>    def <strong>init</strong>(self,size,type,add):<br>        self.s=size #房子的大小，户型，位置<br>        self.t=type<br>        self.a=add<br>        self.d=size  #房子还剩多少平，初始值为房子原来的大小，然后在减去家具的大小。<br>    def <strong>str</strong>(self):<br>        return ‘房子的面积是{}平，房子还剩{}平，房子的类型是{}，房子的位置{}’.format(self.s,self.d,self.t,self.a)<br>    def z(self,ob):    #ju.s把沙发的面积传进来<br>        self.d-=ob.s<br>class Ju:<br>    def <strong>init</strong>(self,size,type):<br>        self.s=size<br>        self.t=type<br>    def <strong>str</strong>(self):<br>        return ‘{}的大小是：{}’.format(self.t,self.s)<br>home1=Home(400,’复式洋房’,’世界之窗’)<br>ju=Ju(4,’沙发’)<br>home1.z(ju)<br>print(home1)</p>
+        <p>定义一个学校类，学校类里面有，姓名，年龄，性别，获取成员信息方法<br>教师类：继承学校类，添加薪资，课程属性；添加教授课程方法<br>学生类：继承学校类，添加课程，学费；添加打印课程的方法<br>class School():<br>    def <strong>init</strong>(self,name,sex,age):<br>        self.name=name<br>        self.sex=sex<br>        self.age=age<br>    def oop(self):<br>        print(‘欢迎：{}’.format(self.name))<br>    def output(self):<br>        print(‘info{}’.format(self.name).center(60,’<em>‘))<br>        for i,j in self.<strong>dict</strong>.items():<br>            print(i,j)<br>        print(‘end’.center(60,”</em>“))<br>class Student(School):<br>    def <strong>init</strong>(self,name,sex,age,course,tuition):<br>        School.<strong>init</strong>(self,name,sex,age)<br>        self.course=course<br>        self.tuition=tuition<br>        self.oop()<br>    def mm(self,mon):<br>        self.tuition-=mon<br>        print(‘还需要教{}钱’.format(self.tuition))</p>
+<p>class Teacher(School):<br>    def <strong>init</strong>(self,name,sex,age,course,salary):<br>        School.<strong>init</strong>(self,name,sex,age)<br>        self.course=course<br>        self.salary=salary<br>        self.oop()<br>    def <strong>str</strong>(self):<br>        return ‘这个老师是{}，他教的课程是{}’.format(self.name,self.course)<br>s=Student(‘韩梅梅’,’女’,20,’艺术’,8900)<br>te=Teacher(‘马老师’,’男’,56,’艺术’,18900)<br>s.mm(100)<br>s.mm(100)<br>s.mm(100)<br>s.output()<br>te.output()</p>
 
       
 
@@ -254,7 +255,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/07/mjj/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/08/xx/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -268,18 +269,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/08/08/xx/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          学校类，教师类，学生类
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/08/07/kdg/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">烤地瓜案例（面向对象）</div>
+    <a href="/2018/08/07/mjj/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">买家具案例（面向对象）</div>
       <i class="icon-circle-right"></i>
     </a>
   
