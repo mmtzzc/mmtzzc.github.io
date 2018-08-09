@@ -152,6 +152,70 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-excel" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/09/excel/">excel表的写入读取和修改</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/09/excel/" class="archive-article-date">
+  	<time datetime="2018-08-09T11:18:21.358Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>import xlrd<br>import xlwt<br>from xlutils.copy import copy<br>写入<br>def writes(title,context):<br>    ww=xlwt.Workbook()<br>    s=ww.add_sheet(‘信息表’)<br>    for i in range(len(title)):<br>        s.write(0,i,title[i])<br>    for m in range(len(context)):<br>        for n in range(len(context[m])):<br>            s.write(m+1,n,context[m][n])<br>    ww.save(‘people.xls’)<br>从excel表中读数据<br>def dq(name,name1):<br>    s=xlrd.open_workbook(name)<br>    sheet=s.sheet_by_name(name1)<br>    for rownum in range(sheet.nrows):<br>        msg = ‘’<br>        for colnum in range(sheet.ncols):<br>            msg += str(sheet.cell(rownum,colnum).value)<br>        print(msg)<br>修改excel表的内容<br>def alter(name,name1):<br>    w=xlrd.open_workbook(name)<br>    sheet=w.sheet_by_name(name1)<br>    new=copy(w)<br>    new_sheet=new.get_sheet(0)<br>    new_sheet.write(1,1,18)<br>    new.save(name)</p>
+<p>title=[‘姓名’, ‘年龄’, ‘性别’, ‘出生年月’, ‘家庭住址’, ‘婚姻状况’, ‘身份证号码’]<br>context=[[‘张三’,22,’女’,’20000604’,’不详’,’不详’,’41108177485412’],[‘李四’,21,’男’,’19950507’,’河南省郑州’,’已婚’,’41108111111111’],[‘王五’,22,’女’,’19960606’,’河南郑州’,’已婚’,’41247847412543’]]<br>writes(title,context)<br>dq(‘people.xls’,’信息表’)<br>alter(‘people.xls’,’信息表’)</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/09/excel/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-sysx" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -824,69 +888,6 @@ break
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/07/21/ss/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-cs" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/21/cs/">打印省市县三级菜单</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/21/cs/" class="archive-article-date">
-  	<time datetime="2018-07-21T12:10:47.190Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>要求:<br>打印省、市、县三级菜单<br>可返回上一级<br>可随时退出程序<br>list1=[{‘河南省’:{‘新乡市’:[‘原阳县’,’延津县’,’长垣县’],’濮阳市’:[‘大雷县’,’橙子县’,’辣条县’]}},{‘三亚’:{‘乡市’:[‘阳县’,’延县’,’长县’],’濮市’:[‘雷县’,’橙县’,’条县’]}}]<br>while True:<br>    ad=input(‘请输入你要查询的省，返回上一级请按A/a,退出请按Q/q：’).strip()<br>    if ad.upper()==’Q’:<br>        print(‘您已退出该程序’)<br>        break<br>    elif ad.upper()==’A’:<br>        print(‘返回上一级’)<br>    elif ad==’河南省’:<br>        for k in list1[0][‘河南省’]:<br>            print(k)<br>        while True:<br>            aa=input(‘请选择您所在的市：’)<br>            if aa.upper()==’A’:<br>                break<br>                ad=input(‘请输入你要查询的省，返回上一级请按A/a,退请按Q/q：’).strip()<br>            if aa==’新乡市’:<br>                print(‘您所在的市有如下县’)<br>                for x in list1[0][‘河南省’][‘新乡市’]:<br>                    print(x)<br>                print(‘已经是最后一页了亲爱的’)<br>            elif aa==’濮阳市’:<br>                print(‘您所在的市有如下县’)<br>                for x in list1[0][‘河南省’][‘濮阳市’]:<br>                    print(x)<br>                print(‘已经是最后一页了亲爱的’)<br>            else:<br>                print(‘您所查询的县不在河南省’)<br>    elif ad==’三亚’:<br>        for k in list1[1][‘三亚’]:<br>            print(k)<br>        while True:<br>            aa=input(‘请选择您所在的市：’)<br>            if aa.upper()==’A’:<br>                break<br>                ad=input(‘请输入你要查询的省，返回上一级请按A/a,退请按Q/q：’).strip()<br>            if aa==’乡市’:<br>                print(‘您所在的市有如下县’)<br>                for x in list1[1][‘三亚’][‘乡市’]:<br>                    print(x)<br>                print(‘已经是最后一页了亲爱的’)<br>            elif aa==’濮市’:<br>                print(‘您所在的市有如下县’)<br>                for x in list1[1][‘三亚’][‘濮市’]:<br>                    print(x)<br>                print(‘已经是最后一页了亲爱的’)<br>            else:<br>                print(‘您所查询的县不在三亚’)<br>    else:<br>        print(‘您所输入的省份不在当前范围’)    </p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/21/cs/">展开全文 >></a>
         </p>
       
 
