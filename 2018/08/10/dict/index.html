@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018 | Hexo</title>
+  <title>.__dict__的用法 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2018/page/2/index.html">
+  <meta name="description" content="定义一个学校类，学校类里面有，姓名，年龄，性别，属性；注册账号，获取成员信息方法教师类：继承学校类，添加薪资，课程属性；添加教授课程方法 学生类：继承学校类，添加课程，学费；添加打印课程的方法class School:    def init(self,Name,Age,Sex):        self.name=Name        self.age=Age        self.sex=">
+<meta property="og:type" content="article">
+<meta property="og:title" content=".__dict__的用法">
+<meta property="og:url" content="http://yoursite.com/2018/08/10/dict/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="定义一个学校类，学校类里面有，姓名，年龄，性别，属性；注册账号，获取成员信息方法教师类：继承学校类，添加薪资，课程属性；添加教授课程方法 学生类：继承学校类，添加课程，学费；添加打印课程的方法class School:    def init(self,Name,Age,Sex):        self.name=Name        self.age=Age        self.sex=">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-10T13:34:38.391Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content=".__dict__的用法">
+<meta name="twitter:description" content="定义一个学校类，学校类里面有，姓名，年龄，性别，属性；注册账号，获取成员信息方法教师类：继承学校类，添加薪资，课程属性；添加教授课程方法 学生类：继承学校类，添加课程，学费；添加打印课程的方法class School:    def init(self,Name,Age,Sex):        self.name=Name        self.age=Age        self.sex=">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,133 +154,156 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-dict" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      .__dict__的用法
+    </h1>
+  
+
+        
+        <a href="/2018/08/10/dict/" class="archive-article-date">
+  	<time datetime="2018-08-10T13:33:49.118Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-10</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>定义一个学校类，学校类里面有，姓名，年龄，性别，属性；注册账号，获取成员信息方法<br>教师类：继承学校类，添加薪资，课程属性；添加教授课程方法</p>
+<p>学生类：继承学校类，添加课程，学费；添加打印课程的方法<br>class School:<br>    def <strong>init</strong>(self,Name,Age,Sex):<br>        self.name=Name<br>        self.age=Age<br>        self.sex=Sex<br>    def s(self):<br>        print(‘欢迎新同学:%s’%self.name)<br>    def info(self):<br>        print(‘<strong><strong><em>**</em></strong></strong>info:%s<strong><strong>*</strong></strong>‘%self.name)<br>        for i,j in self.<strong>dict</strong>.items():<br>            print(i,j)<br>        print(‘<strong><strong><em>**</em></strong></strong>end<strong><strong>**</strong></strong>‘)<br>class Teacher(School):<br>    def <strong>init</strong>(self,Name,Age,Sex,cource,salary):<br>        School.<strong>init</strong>(self,Name,Age,Sex)<br>        self.salary=salary<br>        self.cource=cource<br>        self.Tfun()<br>    def Tfun(self):<br>        print(‘%s老师,工资:%d’%(self.name,self.salary))<br>class Student(School):<br>    def <strong>init</strong>(self,Name,Age,Sex,cource,tuition):<br>        School.<strong>init</strong>(self,Name,Age,Sex)<br>        self.cource=cource<br>        self.tuition=tuition<br>        self.Sfun()<br>        self.s()<br>    def Sfun(self):<br>        print(‘欢迎新同学:%s,应交书费:%d’%(self.name,self.tuition))<br>stu1=Student(‘张三’,18,’男’,’python’,8888)<br>stu1.info()<br>tea1=Teacher(‘王五’,35,’男’,’C#’,10000)<br>tea1.info()<br>运行结果：<br>欢迎新同学:张三,应交书费:8888<br>欢迎新同学:张三<br><strong><strong><em>**</em></strong></strong>info:张三<strong><strong>*</strong></strong><br>name 张三<br>age 18<br>sex 男<br>cource python<br>tuition 8888<br><strong><strong><em>**</em></strong></strong>end<strong><strong>**</strong></strong><br>{‘<strong>module</strong>‘: ‘<strong>main</strong>‘, ‘<strong>init</strong>‘: <function school.__init__="" at="" 0x000001af8c1caae8="">, ‘s’: <function school.s="" at="" 0x000001af8c1cab70="">, ‘info’: <function school.info="" at="" 0x000001af8c1cabf8="">, ‘<strong>dict</strong>‘: <attribute '__dict__'="" of="" 'school'="" objects="">, ‘<strong>weakref</strong>‘: <attribute '__weakref__'="" of="" 'school'="" objects="">, ‘<strong>doc</strong>‘: None}</attribute></attribute></function></function></function></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢打赏<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/ss/" class="archive-article-date">
-  	<time datetime="2018-07-21T13:07:39.468Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/ss/">实现购物车功能</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/10/dict/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/cs/" class="archive-article-date">
-  	<time datetime="2018-07-21T12:10:47.190Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/08/09/excel/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">excel表的写入读取和修改</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/cs/">打印省市县三级菜单</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/Python_08/" class="archive-article-date">
-  	<time datetime="2018-07-21T11:54:56.544Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/Python_08/">Python基础8——元组、字典的相关操作</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/17/text/" class="archive-article-date">
-  	<time datetime="2018-07-17T07:51:35.052Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/17/text/">mmt</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2018/">&laquo; Prev</a><a class="page-number" href="/archives/2018/">1</a><span class="page-number current">2</span>
-    </nav>
   
 
 
@@ -300,8 +327,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

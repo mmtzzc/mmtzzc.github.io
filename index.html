@@ -152,6 +152,70 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-dict" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/10/dict/">.__dict__的用法</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/10/dict/" class="archive-article-date">
+  	<time datetime="2018-08-10T13:33:49.118Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>定义一个学校类，学校类里面有，姓名，年龄，性别，属性；注册账号，获取成员信息方法<br>教师类：继承学校类，添加薪资，课程属性；添加教授课程方法</p>
+<p>学生类：继承学校类，添加课程，学费；添加打印课程的方法<br>class School:<br>    def <strong>init</strong>(self,Name,Age,Sex):<br>        self.name=Name<br>        self.age=Age<br>        self.sex=Sex<br>    def s(self):<br>        print(‘欢迎新同学:%s’%self.name)<br>    def info(self):<br>        print(‘<strong><strong><em>**</em></strong></strong>info:%s<strong><strong>*</strong></strong>‘%self.name)<br>        for i,j in self.<strong>dict</strong>.items():<br>            print(i,j)<br>        print(‘<strong><strong><em>**</em></strong></strong>end<strong><strong>**</strong></strong>‘)<br>class Teacher(School):<br>    def <strong>init</strong>(self,Name,Age,Sex,cource,salary):<br>        School.<strong>init</strong>(self,Name,Age,Sex)<br>        self.salary=salary<br>        self.cource=cource<br>        self.Tfun()<br>    def Tfun(self):<br>        print(‘%s老师,工资:%d’%(self.name,self.salary))<br>class Student(School):<br>    def <strong>init</strong>(self,Name,Age,Sex,cource,tuition):<br>        School.<strong>init</strong>(self,Name,Age,Sex)<br>        self.cource=cource<br>        self.tuition=tuition<br>        self.Sfun()<br>        self.s()<br>    def Sfun(self):<br>        print(‘欢迎新同学:%s,应交书费:%d’%(self.name,self.tuition))<br>stu1=Student(‘张三’,18,’男’,’python’,8888)<br>stu1.info()<br>tea1=Teacher(‘王五’,35,’男’,’C#’,10000)<br>tea1.info()<br>运行结果：<br>欢迎新同学:张三,应交书费:8888<br>欢迎新同学:张三<br><strong><strong><em>**</em></strong></strong>info:张三<strong><strong>*</strong></strong><br>name 张三<br>age 18<br>sex 男<br>cource python<br>tuition 8888<br><strong><strong><em>**</em></strong></strong>end<strong><strong>**</strong></strong><br>{‘<strong>module</strong>‘: ‘<strong>main</strong>‘, ‘<strong>init</strong>‘: <function school.__init__="" at="" 0x000001af8c1caae8="">, ‘s’: <function school.s="" at="" 0x000001af8c1cab70="">, ‘info’: <function school.info="" at="" 0x000001af8c1cabf8="">, ‘<strong>dict</strong>‘: <attribute '__dict__'="" of="" 'school'="" objects="">, ‘<strong>weakref</strong>‘: <attribute '__weakref__'="" of="" 'school'="" objects="">, ‘<strong>doc</strong>‘: None}</attribute></attribute></function></function></function></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/10/dict/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-excel" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -824,70 +888,6 @@ break
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/07/23/ss2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ss" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/21/ss/">实现购物车功能</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/21/ss/" class="archive-article-date">
-  	<time datetime="2018-07-21T13:07:39.468Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中。<br>购物车 操作（买，充值，退出，删除） 商品表（列表里套字典）<br>功能要求：<br>要求用户输入总资产，例如：2000 去除俩边空格<br>显示商品列表，让用户根据序号选择商品，加入购物车<br>购买，如果商品总额大于总资产，提示账户余额不足，否则，购买成功。<br>print(‘<strong><strong><em>**</em></strong></strong>欢迎进入大雷购物系统<strong><strong><strong>*</strong></strong></strong>‘)<br>li=[]<br>flag=True<br>while flag:<br>a=input(‘请输入您的总资产：’).strip()<br>if a.isdigit():<br>a=int(a)<br>a=int(a)<br>print(a)<br>break<br>else:<br>print(‘总资产应输入一个数字，请重新输入’)<br>list1=[{‘name’:’苹果’,’price’:20},{‘name’:’橙子’,’price’:25},{‘name’:’芒果’,’price’:30},{‘name’:’橘子’,’price’:15},]<br>for i,j in enumerate(list1,1):<br>print(‘产品编号:%d, 产品名称:%s, 产品价格:%d’ % (i,list1[i-1][‘name’],list1[i-1][‘price’]))<br>while True:<br>b=input(‘请选择您要购买的商品,点击q/Q退出系统，点击c/C充值，点击d/D删除：’)<br>if b==’q’ or b==’Q’:<br>print(‘您已退出购物系统,以下是您的购物清单’)<br>print(li)<br>break<br>if b.isdigit():<br>b=int(b)<br>if b&lt;=len(list1):<br>if list1[b-1][‘price’]&lt;=a:<br>a-=list1[b-1][‘price’]<br>print(‘您购买的产品为%s,您的当前余额为%d’ % (list1[b-1][‘name’],a))<br>li.append(list1[b-1][‘name’])<br>else:</p>
-<p>print(‘当前余额不足，请充值’)<br>else:<br>print(‘您输入的商品编号有误,暂无%d号产品’ % b)<br>elif b.upper()==’C’:<br>s=int(input(‘请输入充值金额：’))<br>a=a+s<br>print(‘充值成功，当前余额为%d’ % a)<br>elif b.upper()==’D’:<br>li.pop(-1)<br>print(‘删除后的购物列表如下’)<br>print(li)<br>else:<br>print(‘您的输入有误,请按提示输入’)</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/21/ss/">展开全文 >></a>
         </p>
       
 
